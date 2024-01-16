@@ -299,14 +299,15 @@ header {
 /* Why choose section */
 .why-choose-section {
     margin-bottom: 100px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     align-content: center;
 }
 .box {
     padding: 32px;
     border-radius: 16px;
+    width: calc(50% - (24px / 2))
 }
 .box-1 {
     background-color: rgba(251, 181, 99, 0.05);
@@ -341,6 +342,124 @@ header {
     color: #5A5A5D;
     font-size: 16px;
     line-height: 26px;
+}
+
+/* newsletter section */
+.newsletter-title {
+    color: #131318;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 16px;
+
+}
+.newsletter-description {
+    color: #5A5A5D;
+    font-size: 16px;
+    line-height: 26px;
+}
+.newsletter-section {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.newsletter-box {
+    border: 1px solid #FF5400;
+    padding: 40px;
+    border-radius: 16px;
+}
+.news-horizontal {
+    margin: 24px 40px;
+}
+.newsletter-inputs input{
+    padding: 16px 20px;
+    width: 100%;
+    margin-bottom: 16px;
+    color: rgba(19, 19, 24, 0.30);
+    font-size: 16px; 
+    background-color: rgba(19, 19, 24, 0.05);
+    border-radius: 8px;
+    border: none;
+}
+.newsletter-inputs > button {
+    width: 100%;
+}
+
+.cuppon-link {
+    color: white;
+    font-size: 15.853px;
+    margin-bottom: 2.46px;
+}
+.cuppon-title {
+    color: white;
+    font-size: 21.138px;
+    font-weight: 800;
+}
+.cuppon{
+    padding: 24px 30px;
+    position: absolute;
+    background-color: #FF5400;
+    border-radius: 16px;
+    text-align: center;
+    transform: rotate(-19.628deg);
+    margin-top: -130px;
+    right: 135px;
+}
+
+
+/* footer section styles */
+footer{
+    background-color: rgba(19, 19, 24, 0.05);
+    height: 502px;
+    width: 100%;
+
+}
+.footer-content {
+    text-align: center;
+    padding-top: 110px;
+    margin: 0 auto;
+}
+.footer-icon {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-title {
+    color: #131318;
+    font-size: 32px; 
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+.footer-title span {
+    color: #FF5400;
+}
+.footer-description {
+    color: #5A5A5D;
+    font-size: 16px; 
+    line-height: 26px;
+    margin-bottom: 33px;
+    padding: 0 200px;
+}
+.icon-container  {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.icon-container i {
+    font-size: 24px;
+}
+.horizontal-line {
+    color: rgba(19, 19, 24, 0.10);
+    height: 1px;
+    margin: 50px 190px;
+}
+.copy-right {
+    color: #131318;
+    font-size: 16px; 
+    font-weight: 300;
 }
 
 
@@ -491,5 +610,43 @@ header {
         gap: 16px;
         margin-bottom: 24px;
     }
+    .box {
+        width: 100%;
+    }
 
+    /* footer section  */
+    footer {
+        height: 309px;
+    }
+    .footer-content {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+    .footer-icon > img {
+        height: 33.516px;
+        width: 28.724px;
+    }
+    .footer-title{
+        font-size: 21.543px;
+    }
+    .footer-description {
+        padding: 0 44px;
+        margin-bottom: 16px;
+    }
+    .horizontal-line {
+        margin: 24px 20px;
+    }
+
+    /* newsletter section */
+    .newsletter-section {
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+    .newsletter-section .newsletter-img {
+        height: auto;
+        width: 100%;
+    }
+    .cuppon {
+        right: 25px;
+    }
 }

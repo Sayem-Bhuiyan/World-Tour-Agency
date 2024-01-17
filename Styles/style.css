@@ -296,6 +296,62 @@ header {
     align-items: center;
 }
 
+/* what we are offering */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 100px;
+}
+.card {
+    border: 1px solid rgba(16,12,8,.1);
+    text-align: center;
+    border-radius: 16px;
+}
+.card-content {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-img {
+    margin-bottom: 24px;
+    width: calc(25% - (24px / 2));
+    height: 200px;
+    width: 100%;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+}
+.card-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #100c08;
+    margin-bottom: 16px;
+}
+.card-content .arrow-icon {
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgba(16,12,8,.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 24px;
+    transition: all .3s 0.1s ease-in-out;
+}
+.arrow-icon:hover {
+    background-color: #63AB45;
+}
+.arrow-icon:hover .icon {
+    color: white;
+}
+.arrow-icon > i {
+    font-size: 20px;
+    font-weight: 800;
+}
+
 /* Why choose section */
 .why-choose-section {
     margin-bottom: 100px;
@@ -648,5 +704,9 @@ footer{
     }
     .cuppon {
         right: 25px;
+    }
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 24px;
     }
 }
